@@ -1,0 +1,7 @@
+<%= attachment_image_tag @diary, :image, :fill, 300, 300, format: 'jpeg' %>
+<h2>title</h2>
+<p><%= @diary.title %></p>
+<h2>text</h2>
+<p><%= @diary.main_text %></p>
+<%= link_to "edit", edit_book_path(@diary.id) %>
+<%= link_to "delete", destroy_book_path(@diary.id), method: :delete, "data-confirm" => "keshimasuka?" %>

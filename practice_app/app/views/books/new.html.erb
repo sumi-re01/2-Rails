@@ -1,0 +1,10 @@
+<h3>share the world</h3>
+<%= form_with model:@diary, url:'/books', lpcal:true do |f| %>
+  title
+  <%= f.text_field :title %>
+  <p>what's up?</p>
+  <%= f.text_area :main_text %>
+  <p>image</p>
+  <%= f.attachment_field :image %>
+  <%= f.submit 'send' %>
+<% end %>

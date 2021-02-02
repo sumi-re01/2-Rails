@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PracticeApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Indie+Flower&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <h1 class="headline"><%=link_to "Loisir", top_path %> </h1>
+    </header>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <%=link_to "mon chouchou", books_path %>
+        </li>
+        <li class="nav-list-item">
+          <%=link_to "nouveau", books_new_path %>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>

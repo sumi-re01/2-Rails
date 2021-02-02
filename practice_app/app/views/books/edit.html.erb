@@ -1,0 +1,10 @@
+<h2>edit view</h2>
+<%= form_with model:@diary, url:"/books/#{@diary.id}", local:true do |f| %>
+<h3>title</h3>
+<%= f.text_field :title %>
+<h3>text</h3>
+<%= f.text_area :main_text %>
+<h3>image</h3>
+<%= f.attachment_field :image %>
+<%= f.submit 'complete' %>
+<% end %>
